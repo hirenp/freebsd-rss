@@ -63,6 +63,7 @@ rss_sock_set_rss_bucket(int fd, int af_family, int rss_bucket)
 int
 rss_sock_set_recvrss(int fd, int af_family, int val)
 {
+#if 0
 	int opt, retval;
 	socklen_t optlen;
 
@@ -91,7 +92,7 @@ rss_sock_set_recvrss(int fd, int af_family, int val)
 		warn("%s: setsockopt(IP_RECVRSSBUCKETID)", __func__);
 		return (-1);
 	}
-
+#endif
 	return (0);
 }
 

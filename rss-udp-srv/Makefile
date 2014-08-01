@@ -4,9 +4,9 @@ SRCS=udp_srv.c
 LDADD=-lpthread
 
 # libevent
-CFLAGS+=-I/home/adrian/local/include
-LDFLAGS+=-L/home/adrian/local/lib/
-LDADD+= -levent -levent_pthreads
+CFLAGS+=-I/usr/local/include/
+LDFLAGS+=-L/usr/local/lib/
+LDADD+= -L /usr/local/lib/event2 -levent -levent_pthreads
 
 # librss
 CFLAGS+= -I${.CURDIR}/../librss/
